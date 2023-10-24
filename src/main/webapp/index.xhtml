@@ -1,50 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
-
-<h:head> 
-    <style>
-        .button-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .button-link:hover {
-            background-color: #0056b3;
-        }
-    </style> 
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    
 </h:head>
-
 <h:body style="margin-left:50px">
-
-	<h2>PrimeFaces Linear Chart Example</h2>
+    <h2>PrimeFaces Linear Chart Example</h2>
+    <p:chart type="line" model="#{lineChartBean.lineModel}" style="height:400px;width:900px"/>
  
-	<p:chart type="line" model="#{lineChartBean.lineModel}"
-		style="height:400px;width:900px" />
-
-	<h:form>
-    <p:steps activeIndex="#{stepView.activeIndex}">
-        <p:menuitem value="Personal" />
-        <p:menuitem value="Seat Selection" />
-        <p:menuitem value="Payment" />
-        <p:menuitem value="Confirmation" />
-    </p:steps>
-
-    <!-- Botão para avançar para a próxima etapa --> 
-    <p:commandButton value="Next" actionListener="#{stepView.nextStep}"   update="@form" />
-		<p:growl id="growl" life="3000" />
-		<p:commandButton value="Click here" id="ajax" update="growl"
-			action="#{commandButton.commandButtonAction}"
-			styleClass="ui-priority-primary" />
-	</h:form> 
 </h:body>
 </html>
