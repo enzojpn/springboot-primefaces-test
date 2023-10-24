@@ -7,10 +7,25 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
+    <style>
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </h:head>
 
 <h:body style="margin-left:50px">
 	<h2>PrimeFaces Linear Chart Example</h2>
 	<p:chart type="line" model="#{lineChartBean.lineModel}" style="height:400px;width:900px"/>
+	 
 </h:body>
 </html>
